@@ -2,26 +2,22 @@ import React from 'react';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import styled from 'styled-components'
-import Img from "gatsby-image"
-import { StaticQuery, graphql } from 'gatsby'
-import Image from '../components/image'
 
 const About = styled.div`
-position: absolute;
-bottom: 0;
-right: 100px;
-@media (max-width: 1024px) {
-  display: none;
-}
+  display: flex;
+  align-items: center;
   .inner {
-    height: 300px;
-    padding: 25px;
+    padding-left: 100px;
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: -1;
     width: 500px;
-
     @media (max-width: 600px) {
-      left: 0;
+     padding-left: 5%;
+     width: 100%;
     }
-
     h3 {
       color: #0a0a0a;
       font-size: 42px;
@@ -67,17 +63,3 @@ const AboutPage = ({data}) => (
 
 
 export default AboutPage;
-
-export const query = graphql`
-  query {
-    file(relativePath: { eq: "flower.png" }) {
-      childImageSharp {
-        # Specify the image processing specifications right in the query.
-        # Makes it trivial to update as your page's design changes.
-        fixed(width: 125, height: 125) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-  }
-`

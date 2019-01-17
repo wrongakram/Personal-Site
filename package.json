@@ -1,5 +1,5 @@
 {
-  "name": "Akram Portfolio",
+  "name": "gastby-default-start",
   "private": true,
   "description": "A portfolio site for me",
   "version": "0.1.0",
@@ -18,6 +18,7 @@
     "gatsby-plugin-react-helmet": "^3.0.2",
     "gatsby-plugin-sharp": "^2.0.14",
     "gatsby-plugin-styled-components": "^3.0.4",
+    "gatsby-plugin-transition-link": "^1.4.7",
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-filesystem": "^2.0.8",
     "gatsby-transformer-sharp": "^2.1.8",

@@ -1,7 +1,8 @@
-import {TimelineLite, Expo, TweenLite} from "gsap";
+import {TimelineLite, Expo, TweenLite, TimelineMax} from "gsap";
 import React, {Component} from 'react';
 import styled  from 'styled-components';
 import { Link } from 'gatsby';
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 
 
@@ -90,8 +91,8 @@ class Header extends Component {
               height: '70px'
           }}
         >
-          <div ref={a => this.hoverLink2 = a}>
-            <Link  to="/" style={{ textDecoration: 'none',color: '#000', margin: 0,fontWeight: 700, fontFamily: 'Playfair Display', display: 'block', fontSize: '20px'}}>A.</Link></div>
+        <NavItem ref={a => this.hoverLink2 = a} ><AniLink cover bg="#000" to="/" duration={1}>A.</AniLink></NavItem>
+
           <div>
             <ul style={{
                     padding: 0,
@@ -99,7 +100,7 @@ class Header extends Component {
                     display: 'flex',
                     alignItems: 'center'
                   }} >
-              <NavItem ref={a => this.hoverLink = a} ><Link to="/about">menu</Link></NavItem>
+              <NavItem ref={a => this.hoverLink = a} ><AniLink cover bg="#000" to="/about" duration={1}>about</AniLink></NavItem>
             </ul>
           </div>
         </div>

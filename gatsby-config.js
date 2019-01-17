@@ -31,5 +31,12 @@ module.exports = {
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
     `gatsby-plugin-styled-components`,
+    {
+          resolve: "gatsby-plugin-transition-link",
+          options: {
+              layout: require.resolve(`./src/components/layout.js`)
+            }
+       }
+
   ],
 }
