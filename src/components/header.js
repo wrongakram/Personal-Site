@@ -1,11 +1,6 @@
-import {TimelineLite, Expo, TweenLite, TimelineMax} from "gsap";
 import React, {Component} from 'react';
 import styled  from 'styled-components';
-import { Link } from 'gatsby';
 import AniLink from "gatsby-plugin-transition-link/AniLink";
-
-
-
 
 const NavItem = styled.li`
   margin: 0 20px;
@@ -49,34 +44,26 @@ class Header extends Component {
       this.cursorDot.style.left = e.pageX + 'px';
       this.cursorDot.style.top = e.pageY + 'px';
     }
-    this.myTween = new TimelineLite({paused: true});
-    this.myTween
-    .to(this.hoverLink, .2, {scale: 1.1, x: 0, y: -4})
-
     this.hoverLink.onmouseover = () => {
-     this.myTween.play();
      this.cursorShadow.classList.add('active');
      this.cursorDot.classList.add('active');
   }
 
      this.hoverLink.onmouseleave = () => {
-     this.myTween.reverse();
      this.cursorShadow.classList.remove('active');
      this.cursorDot.classList.remove('active');
   }
 
 
-  this.hoverLink2.onmouseover = () => {
-   this.myTween.play();
-   this.cursorShadow.classList.add('active');
-   this.cursorDot.classList.add('active');
-}
+    this.hoverLink2.onmouseover = () => {
+     this.cursorShadow.classList.add('active');
+     this.cursorDot.classList.add('active');
+  }
 
-   this.hoverLink2.onmouseleave = () => {
-   this.myTween.reverse();
-   this.cursorShadow.classList.remove('active');
-   this.cursorDot.classList.remove('active');
-}
+     this.hoverLink2.onmouseleave = () => {
+     this.cursorShadow.classList.remove('active');
+     this.cursorDot.classList.remove('active');
+  }
 }
 
   render() {
@@ -88,7 +75,6 @@ class Header extends Component {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
-              height: '70px'
           }}
         >
         <NavItem ref={a => this.hoverLink2 = a} ><AniLink cover bg="#000" to="/" duration={1}>A.</AniLink></NavItem>

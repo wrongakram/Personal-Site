@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import styled, {css} from 'styled-components'
-import Link from 'gatsby-link'
 import {TimelineLite, Expo,} from "gsap";
 
 
@@ -35,16 +34,18 @@ const Title = styled.h1`
 
 const HeroWrapper = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
   @media (max-width: 600px) {
     flex-wrap: wrap
-    flex-direction: column
+
   }
 `
 
 const HeroDetails = styled.div`
   padding-left: 100px;
   margin-top: 200px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -53,7 +54,6 @@ const HeroDetails = styled.div`
   z-index: -1;
   @media (max-width: 600px) {
    padding-left: 5%;
-   width: 100%;
   }
 `
 
@@ -61,10 +61,9 @@ const TitleContainer = styled.div`
   overflow: hidden;
   position: relative;
   height: 100px;
-  width: 700px;
+  width: 100%;
   @media (max-width: 600px) {
    overflow: visible;
-   width: 100%;
    height: 8rem;
   }
 `
