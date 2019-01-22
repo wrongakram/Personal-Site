@@ -1,12 +1,14 @@
 import React, {Component} from 'react';
 import styled  from 'styled-components';
 import AniLink from "gatsby-plugin-transition-link/AniLink";
+import {TimelineLite, Expo,} from "gsap";
 
 const NavItem = styled.li`
   margin: 0 20px;
   padding: 0;
   list-style: none;
   a {
+    margin-top: 10px;
     text-decoration: none;
     font-size: 12px;
     text-transform: uppercase;
@@ -21,6 +23,9 @@ const NavItem = styled.li`
   position: fixed;
   width: 100%;
   height: 70px;
+  opacity: 0;
+  transform: translateY(10px);
+  background: #fff;
   @media (max-width: 600px) {
     padding: 10px 5%;
   }
@@ -33,10 +38,14 @@ class Header extends Component {
     this.hoverLink = null;
     this.hoverLink2 = null;
     this.myTween = null;
+    this.header = null;
   }
 
 
   componentDidMount(){
+    this.myTween = new TimelineLite();
+    this.myTween
+    .to(this.header, .6, {opacity: 1, delay: .8 ,ease: Expo.easeOut, x: 0, y: 0})
 
     window.onmousemove = (e) => {
       this.cursorShadow.style.left = e.pageX + 'px';
@@ -68,7 +77,7 @@ class Header extends Component {
 
   render() {
     return (
-      <NavWrapper>
+      <NavWrapper ref={div => this.header = div}>
         <div
           style={{
             margin: `0 auto`,
@@ -78,7 +87,6 @@ class Header extends Component {
           }}
         >
         <NavItem ref={a => this.hoverLink2 = a} ><AniLink cover bg="#000" to="/" duration={1}>A.</AniLink></NavItem>
-
           <div>
             <ul style={{
                     padding: 0,

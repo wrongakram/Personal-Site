@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import styled from 'styled-components'
-import Link from 'gatsby-link'
 import {TimelineLite,} from "gsap";
 import { faDribbble, faGithub, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -25,7 +24,7 @@ z-index: 10;
     flex-direction: row;
     li {
       list-style: none;
-      margin-right: 15px;
+      margin-right: 25px;
       a {
         text-decoration: none;
         font-weight: 300;
@@ -33,6 +32,9 @@ z-index: 10;
         text-transform: capitalize;
         svg {
           font-size: 16px;
+        }
+        &:hover {
+          color: #fff;
         }
       }
     }
@@ -42,10 +44,10 @@ z-index: 10;
 
 
 const socialsArray = [
-  {url: "https://dribbble.com/",  icon: "dribbble"},
-  {url: "https://github.com/", icon: "github"},
-  {url: "https://www.linkedin.com/", icon: "linkedin"},
-  {url: "https://www.instagram.com/",  icon: "instagram"},
+  {url: "https://dribbble.com/Arxaa",  icon: "dribbble"},
+  {url: "https://github.com/akramk22", icon: "github"},
+  {url: "https://www.linkedin.com/in/akram-khalid-12b977142/", icon: "linkedin"},
+  {url: "https://www.instagram.com/wrongakram",  icon: "instagram"},
 ]
 
 class SocialIcons extends Component {
@@ -70,7 +72,7 @@ class SocialIcons extends Component {
                 key={`social-${index}`}
                 ref={ li => this.socials[index] = li }
                 >
-                <Link to={social.url}><FontAwesomeIcon icon={['fab', `${social.icon}`]} /></Link>
+                <a href={social.url}><FontAwesomeIcon icon={['fab', `${social.icon}`]} /></a>
               </li>
             )
           } )

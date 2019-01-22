@@ -675,3 +675,12 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+@media only screen and (max-width: 800px) {
+.cursor {
+  display: none;
+}
+* {
+  cursor: auto;
+}
+}
