@@ -93,28 +93,28 @@ class RecentWorks extends Component {
           <span>
             <video autoPlay muted loop="loop" width="400" height="300">
             <source src={require('../images/travel.mp4')} type="video/mp4" />
-            <img alt="recent work" src={require('../images/travel.gif')} width="400" height="300" /></video>
+            <img alt="recent work" src={require('../images/travel.png')} width="400" height="300" /></video>
           </span>
         </Project>
         <Project>
           <span>
             <video autoPlay muted loop="loop" width="400" height="300">
             <source src={require('../images/planr.mp4')} type="video/mp4" />
-            <img alt="recent work" src={require('../images/planr.gif')} width="400" height="300" /></video>
+            <img alt="recent work" src={require('../images/planr.png')} width="400" height="300" /></video>
           </span>
         </Project>
         <Project>
           <span>
             <video autoPlay muted loop="loop" width="400" height="300">
             <source src={require('../images/vistra-energy.mp4')} type="video/mp4" />
-            <img alt="recent work" src={require('../images/vistra-energy.gif')} width="400" height="300" /></video>
+            <img alt="recent work" src={require('../images/vistra-energy.png')} width="400" height="300" /></video>
           </span>
         </Project>
         <Project>
           <span>
             <video autoPlay muted loop="loop" width="400" height="300">
             <source src={require('../images/audi.mp4')} type="video/mp4" />
-            <img alt="recent work" src={require('../images/audi.gif')} width="400" height="300" /></video>
+            <img alt="recent work" src={require('../images/audi.png')} width="400" height="300" /></video>
           </span>
         </Project>
         </ProjectList>
