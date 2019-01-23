@@ -110,7 +110,7 @@ class RecentWorks extends Component {
             <img alt="recent work" src={require('../images/vistra.gif')} width="400" height="300" /></video>
           </span>
         </Project>
-        <Project>
+        <Project> 
           <span>
             <video autoPlay muted loop="loop" width="400" height="300">
             <source src={require('../images/audi.mp4')} type="video/mp4" />
