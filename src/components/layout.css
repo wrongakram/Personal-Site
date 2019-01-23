@@ -3,7 +3,6 @@
 *{
   cursor: none;
   text-decoration: none;
-  font-family: 'Circular Std Black'
 }
 
 .cursor {
@@ -139,7 +138,6 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace, monospace;
   font-size: 1em;
 }
 figure {
@@ -250,7 +248,7 @@ body {
   transition:  .3s ease;
   color: hsla(0, 0%, 0%, 0.8);
   background: #fff;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: 'Circular Std Black', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: normal;
   word-wrap: break-word;
