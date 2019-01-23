@@ -36,6 +36,15 @@ module.exports = {
           options: {
               layout: require.resolve(`./src/components/layout.js`)
             }
+       },
+       {
+         resolve: 'gatsby-plugin-web-font-loader',
+         options: {
+           custom: {
+             families: ['Circular Std Black', 'Circular Std Book'],
+             urls: ['fonts.css']
+           }
+         }
        }
 
   ],
