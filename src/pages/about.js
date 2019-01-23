@@ -4,29 +4,28 @@ import SEO from '../components/seo';
 import styled from 'styled-components'
 
 const About = styled.div`
-  display: flex;
-  align-items: center;
-      font-family: Circular Std Book;
+  font-family: Circular Std Book;
+  margin: 100px 0;
   .inner {
-    padding-left: 100px;
-    margin: 200px 0;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     position: relative;
     z-index: -1;
-    width: 65%;
+    width: 50%;
     @media (max-width: 600px) {
-     padding-left: 5%;
+     padding: 0 2%;
      width: 100%;
     }
     h3 {
       color: #0a0a0a;
-      font-size: 52px;
+      font-size: 40px;
+      line-height: 30px;
       font-family: 'Circular Std Black';
+      text-align: center;
+      margin-bottom: 30px;
       span {
-        -webkit-text-fill-color: white;
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: 0a0a0a;
+        font-size: 20px;
       }
       @media (max-width: 600px) {
        font-size: 34px;
@@ -34,8 +33,9 @@ const About = styled.div`
     }
     .block {
       display: block;
-      height: 4px;
+      height: 3px;
       width: 50px;
+      margin: 0 auto;
       background: #0a0a0a;
       margin-bottom: 50px;
     }
@@ -51,7 +51,9 @@ const About = styled.div`
 `
 
 const SkillsList = styled.div`
+  margin-top: 25px;
   display: flex;
+  justify-content: space-around;
   ul {
     margin-top: 75px;
     padding: none;
@@ -73,21 +75,14 @@ const AboutPage = ({data}) => (
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
       <About>
         <div className="inner">
-          <h3>A little about <br></br> <span>who</span> I am.</h3>
+          <h3>A <span>little</span> about <br></br> who I am.</h3>
           <span className="block"></span>
-          <p>Hello there, My name is Akram Khalid. I help bring new and exciting designs and tech to a wide variety of clients.
+          <p style={{margin: '0px 0px 40px 0'}} >Hello there, My name is Akram Khalid. I help bring new and exciting designs and tech to a wide variety of clients.
           I pride myself on being able to turn an idea into a product. Learning new things is part of my everday life and will be for a long time to come.
           </p>
-          <p>Currently making things happen at Vitalstorm Marketing.</p>
-          <p>Skills & other things:</p>
+          <p style={{textAlign: 'center', margin: '0px 0px 40px 0', fontWeight: 700}}>Currently making things happen at Vitalstorm Marketing.</p>
+          <p style={{textAlign: 'center'}}>Skills & other things:</p>
           <SkillsList>
-            <ul>
-              <b>Design</b>
-              <li>Photoshop</li>
-              <li>Illustrator</li>
-              <li>Xd</li>
-              <li>Protopie</li>
-            </ul>
             <ul>
               <b>Development</b>
               <li>HTML</li>
@@ -99,6 +94,13 @@ const AboutPage = ({data}) => (
               <li>GraphQL</li>
               <li>Node</li>
               <li>Wordpress</li>
+            </ul>
+            <ul>
+              <b>Design</b>
+              <li>Photoshop</li>
+              <li>Illustrator</li>
+              <li>Xd</li>
+              <li>Protopie</li>
             </ul>
           </SkillsList>
       </div>

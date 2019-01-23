@@ -1,13 +1,14 @@
 import React, {Component} from 'react'
 import styled from 'styled-components'
-import {TimelineLite, Expo, TweenMax} from "gsap";
+import {TimelineLite, Expo} from "gsap";
 
 
 
 
 const RecentWrapper = styled.div`
   margin-left: 100px;
-  margin-top: 100px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   display: flex;
   @media (max-width: 860px) {
     flex-direction: column;
@@ -40,6 +41,8 @@ const ProjectList = styled.div`
   z-index: -1;
   width: 70%;
   opacity: 0;
+  display: flex;
+  flex-wrap: wrap;
   @media (max-width: 860px) {
     width: 100%;
     margin-top: 100px;
@@ -47,17 +50,12 @@ const ProjectList = styled.div`
 `
 
 const Project = styled.div`
-  margin: 0 0 100px 0;
   z-index: -3;
+  padding:  0px 15px;
   span {
-    display: block;
     z-index: -1 !important;
-    display: flex;
-    align-items: center;
   }
-  img {
-    width: 75%;
-    margin: 0 auto !important;
+  video {
     @media (max-width: 860px) {
       width: 100%;
       padding-right: 5%;
@@ -92,23 +90,31 @@ class RecentWorks extends Component {
       </RecentContent>
         <ProjectList ref={img => this.img = img}>
         <Project>
-          <span alt="project1">
-            <img src={require('../images/dribble_travel.gif')} alt="loading..." />
+          <span>
+            <video autoPlay muted loop="loop" width="400" height="300">
+            <source src={require('../images/travel.mp4')} type="video/mp4" />
+            <img alt="recent work" src={require('../images/travel.gif')} width="400" height="300" /></video>
           </span>
         </Project>
         <Project>
-          <span >
-            <img src={require('../images/planr2.gif')} alt="loading..." />
+          <span>
+            <video autoPlay muted loop="loop" width="400" height="300">
+            <source src={require('../images/planr.mp4')} type="video/mp4" />
+            <img alt="recent work" src={require('../images/planr.gif')} width="400" height="300" /></video>
           </span>
         </Project>
         <Project>
-          <span >
-            <img src={require('../images/Vistra.gif')} alt="loading..." />
+          <span>
+            <video autoPlay muted loop="loop" width="400" height="300">
+            <source src={require('../images/vistra.mp4')} type="video/mp4" />
+            <img alt="recent work" src={require('../images/vistra.gif')} width="400" height="300" /></video>
           </span>
         </Project>
         <Project>
-          <span >
-            <img src={require('../images/audi.gif')} alt="loading..." />
+          <span>
+            <video autoPlay muted loop="loop" width="400" height="300">
+            <source src={require('../images/audi.mp4')} type="video/mp4" />
+            <img alt="recent work" src={require('../images/audi.gif')} width="400" height="300" /></video>
           </span>
         </Project>
         </ProjectList>
