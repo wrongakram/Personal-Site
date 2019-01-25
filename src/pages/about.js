@@ -90,9 +90,11 @@ const AboutPage = ({data}) => (
               <li>Javascript - es6</li>
               <li>Jquery</li>
               <li>React</li>
-              <li>MongoDB</li>
+              <li>Gatsby.js / Next.js</li>
               <li>GraphQL</li>
-              <li>Node</li>
+              <li>REST API</li>
+              <li>Webpack</li>
+              <li>Node.js / npm</li>
               <li>Wordpress</li>
             </ul>
             <ul>

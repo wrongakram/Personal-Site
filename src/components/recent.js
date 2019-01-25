@@ -78,9 +78,6 @@ class RecentWorks extends Component {
     .to(this.recent, 1.2, {opacity: 1, delay: 2.4 ,ease: Expo.easeOut, x: 0, y: 30})
     .to(this.img, 1.2, {opacity: 1, delay: -1 ,ease: Expo.easeOut, x: 0, y: 30})
   }
-
-
-
   render() {
     return (
       <RecentWrapper>

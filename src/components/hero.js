@@ -200,8 +200,8 @@ class Hero extends Component {
               </TitleContainer>
               <HighlightWrapper>
                  <Highlight><span> <MobileDelete>UI</MobileDelete> Designer</span></Highlight>
-                <Highlight><span> <MobileDelete>Full Stack</MobileDelete> Developer</span></Highlight>
-               <Highlight><span> <MobileDelete>Certified</MobileDelete> Hooper</span></Highlight>
+                <Highlight><span> <MobileDelete>Front End</MobileDelete> Developer</span></Highlight>
+               <Highlight><span> <MobileDelete>Exploring</MobileDelete> MERN Stack</span></Highlight>
            </HighlightWrapper>
           </HeroDetails>
       </HeroWrapper>
