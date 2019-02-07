@@ -56,11 +56,6 @@ typings/
 
 # gatsby files
 .cache/
-public
-gatsby-browser.js
-gatsby-config.js
-gatsby-node.js
-gatsby-ssr.js
 
 
 # Mac files
