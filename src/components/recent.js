@@ -17,17 +17,20 @@ const RecentWrapper = styled.div`
     margin-left: 5%;
   }
   h3 {
-    font-family: 'Circular Std Black';
+    font-family: 'Playfair Display';
+    font-weight: 700;
     margin-bottom: .4rem;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    color: #132f3e;
 
   }
   p {
-    font-family: 'Circular Std Book';
+    font-family: 'Lato';
     font-weight: 300;
-    font-size: 12px;
+    font-size: 14px;
     width: 300px;
     margin: 0;
+    color: #132f3e;
   }
 `
 
@@ -83,7 +86,7 @@ class RecentWorks extends Component {
       <RecentWrapper>
       <RecentContent ref={div => this.recent = div}>
       <h3>Recent Works</h3>
-      <p>This is only a tiny higlight of things I have available to show. More exciting projects coming soon ;).</p>
+      <p>This is only a tiny highlight of things I have available to show. More exciting projects coming soon ;).</p>
       </RecentContent>
         <ProjectList ref={img => this.img = img}>
         <Project>

@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import styled, {css} from 'styled-components'
+import styled from 'styled-components'
 import {TimelineLite, Expo,} from "gsap";
 
 
@@ -9,25 +9,15 @@ const Title = styled.h1`
   margin: 0;
   font-size: 4rem;
   line-height: 4rem;
-  color: #000;
+  color: #132f3e;
   position: absolute;
-  font-family: 'Circular Std Black';
-  ${props => props.outline && css`
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
-  `}
+  font-family: 'Playfair Display';
+  font-weight: 900;
   @media (max-width: 600px) {
-    ${props => props.outline && css`
-      -webkit-text-fill-color: black;
-      -webkit-text-stroke-width: 0px;
-      -webkit-text-stroke-color: transparent;
-    `}
     opacity: 0;
     bottom: -3.2rem;
     line-height: 4rem;
     font-size: 3.2rem;
-    font-weight: 300;
   }
 `
 
@@ -72,7 +62,7 @@ const TitleContainer = styled.div`
 
 const Gradient = styled.span`
  background: linear-gradient(270deg, #FF5F6D, #FFC371, #c34dbf, #ff4b1f, #ff9068, #16BFFD, #a84dc3, #CB3066, #4CA1AF, #C4E0E5);
-background-size: 2000% 2000%;
+ background-size: 2000% 2000%;
 
 -webkit-animation: AnimationName 30s ease infinite;
 -moz-animation: AnimationName 30s ease infinite;
@@ -110,17 +100,17 @@ const HighlightWrapper = styled.div`
 
 
 const Highlight = styled.h3`
-    color: #000;
+    color: #132f3e;
     font-size: 14px;
     padding: 0.4em 1em 0.4em 0;
-    font-family: 'Circular Std Book';
+    font-family: 'Lato';
+    font-weight: 700;
     position: relative;
     margin-right: 25px;
     @media (max-width: 600px) {
       margin-top: -25px;
       padding-left: 4px;
      font-size: 16px;
-     font-weight: 300;
     }
   span {
     opacity: 0;
@@ -134,7 +124,7 @@ const Highlight = styled.h3`
      position: absolute;
      width: 0%;
      height: 100%;
-     background: #000;
+     background: #132f3e;
      animation: rev-block 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
      animation-delay: 1s;
   }
@@ -193,7 +183,7 @@ class Hero extends Component {
       <HeroWrapper>
           <HeroDetails>
               <TitleContainer>
-                  <Title outline ref={a => this.firstTitle = a}>Creating Unique</Title>
+                  <Title ref={a => this.firstTitle = a}>Creating Unique</Title>
               </TitleContainer>
               <TitleContainer>
                 <Title ref={a => this.secondTitle = a}>Digital <Gradient>Experiences.</Gradient></Title>

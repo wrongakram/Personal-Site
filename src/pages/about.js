@@ -4,8 +4,9 @@ import SEO from '../components/seo';
 import styled from 'styled-components'
 
 const About = styled.div`
-  font-family: Circular Std Book;
+  font-family: Lato;
   margin: 100px 0;
+  color: #132f3e;
   .inner {
     margin: 0 auto;
     display: flex;
@@ -18,10 +19,9 @@ const About = styled.div`
      width: 100%;
     }
     h3 {
-      color: #0a0a0a;
       font-size: 40px;
       line-height: 30px;
-      font-family: 'Circular Std Black';
+      font-family: 'Playfair Display';
       text-align: center;
       margin-bottom: 30px;
       span {
@@ -43,7 +43,7 @@ const About = styled.div`
       color: #0a0a0a;
       margin-top: 0px;
       font-weight: 300;
-      font-family: 'Circular Std Book';
+      font-family: 'Lato';
       font-size: 14px;
     }
   }
@@ -54,13 +54,14 @@ const SkillsList = styled.div`
   margin-top: 25px;
   display: flex;
   justify-content: space-around;
+  color: #132f3e;
   ul {
     margin-top: 75px;
     padding: none;
     margin: 0;
     margin-right: 100px;
     li {
-      font-family: Circular Std Book;
+      font-family: Lato;
       margin: 5px 0;
       font-size: 12px;
       font-weight: 300;

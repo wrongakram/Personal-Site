@@ -13,8 +13,8 @@ const NavItem = styled.li`
     font-size: 12px;
     text-transform: uppercase;
     color: #000;
-    font-family: 'Circular Std Black';
-    font-weight: 300;
+    font-family: 'Lato';
+    font-weight: 700;
   }
   `
 

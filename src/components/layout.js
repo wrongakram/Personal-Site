@@ -3,6 +3,13 @@ import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 import Header from './header'
 import './layout.css'
+import { createGlobalStyle } from 'styled-components'
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    background: red;
+  }
+`
 
 
 
@@ -19,6 +26,7 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
+      <GlobalStyle/>
         <Header/>
         <div>
           {children}

@@ -40,9 +40,8 @@ module.exports = {
        {
          resolve: 'gatsby-plugin-web-font-loader',
          options: {
-           custom: {
-             families: ['Circular Std Black', 'Circular Std Book'],
-             urls: ['fonts.css']
+           google: {
+             families: ['Playfair Display:900', 'Lato:300,700']
            }
          }
        },
