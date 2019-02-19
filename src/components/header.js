@@ -1,7 +1,37 @@
 import React, {Component} from 'react';
-import styled  from 'styled-components';
+import styled, {css} from 'styled-components';
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 import {TimelineLite, Expo,} from "gsap";
+
+const CursorItem = styled.div`
+  --size: 6px;
+  height: var(--size);
+  width:  var(--size);
+  border-radius: 50%;
+  position: absolute;
+  /* z-index: 999; */
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  top: -100px;
+  left: -100px;
+
+  ${props => props.shadow && css`
+    opacity: .75;
+    background: #efefff;
+      --size: 50px;
+    transition: top .25s, left .25s, width .5s, height .5s, background .35s;
+    transition-timing-function: ease-out;
+    visibility: hidden;
+  `}
+
+  ${props => props.dot && css`
+    background: #000;
+    transition: width .25s, height .25s;
+    visibility: hidden;
+  `}
+
+
+`
 
 const NavItem = styled.li`
   margin: 0 20px;
@@ -48,6 +78,10 @@ class Header extends Component {
     this.myTween
     .to(this.header, .6, {opacity: 1, delay: .8 ,ease: Expo.easeOut, x: 0, y: 0})
 
+
+    this.cursorShadow.style.visibility = 'visible';
+    this.cursorDot.style.visibility = 'visible';
+
     window.onmousemove = (e) => {
       this.cursorShadow.style.left = e.pageX + 'px';
       this.cursorShadow.style.top = e.pageY + 'px';
@@ -79,6 +113,8 @@ class Header extends Component {
   render() {
     return (
       <NavWrapper ref={div => this.header = div}>
+        <CursorItem shadow ref={div => this.cursorShadow = div} className="cursor-shadow"></CursorItem>
+        <CursorItem dot ref={div => this.cursorDot = div} className="cursor-dot"></CursorItem>
         <div
           style={{
             margin: `0 auto`,
@@ -99,8 +135,6 @@ class Header extends Component {
             </ul>
           </div>
         </div>
-        <div ref={div => this.cursorShadow = div} className="cursor cursor-shadow"></div>
-        <div ref={div => this.cursorDot = div} className="cursor cursor-dot"></div>
       </NavWrapper>
     )
   }

@@ -79,7 +79,7 @@ const AboutPage = ({data}) => (
           <h3>A <span>little</span> about <br></br> who I am.</h3>
           <span className="block"></span>
           <p style={{margin: '0px 0px 40px 0'}} >Hello there, My name is Akram Khalid. I help bring new and exciting designs and tech to a wide variety of clients.
-          I pride myself on being able to turn an idea into a product. Learning new things is part of my everday life and will be for a long time to come.
+          I pride myself on being able to turn an idea into a product. Learning new things is part of my everyday life and will be for a long time to come.
           </p>
           <p style={{textAlign: 'center', margin: '0px 0px 40px 0', fontWeight: 700}}>Currently making things happen at Vitalstorm Marketing.</p>
           <p style={{textAlign: 'center'}}>Skills & other things:</p>

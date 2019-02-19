@@ -7,35 +7,9 @@ import { createGlobalStyle } from 'styled-components'
 const GlobalStyle = createGlobalStyle`
 
 *{
-  cursor: none;
   text-decoration: none;
 }
 
-.cursor {
-  --size: 6px;
-  height: var(--size);
-  width:  var(--size);
-  border-radius: 50%;
-  position: absolute;
-  /* z-index: 999; */
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  top: -100px;
-  left: -100px;
-}
-
-.cursor.cursor-shadow {
-  opacity: .75;
-  background: #ff0000;
-    --size: 50px;
-  transition: top .25s, left .25s, width .5s, height .5s, background .35s;
-  transition-timing-function: ease-out;
-}
-
-.cursor.cursor-dot {
-  background: #000;
-  transition: width .25s, height .25s;
-}
 
 .cursor-shadow.active {
   --size: 80px;
