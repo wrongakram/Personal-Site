@@ -8,6 +8,7 @@ const GlobalStyle = createGlobalStyle`
 
 *{
   text-decoration: none;
+  -webkit-overflow-scrolling: touch;
 }
 
 
@@ -245,14 +246,16 @@ body {
   }
 }
 
-@media only screen and (max-width: 800px) {
-.cursor {
-  display: none;
+@media (max-width: 800px) {
+  .cursor {
+    display: none !important;
+  }
+    * {
+      cursor: auto;
+    }
 }
-* {
-  cursor: auto;
-}
-}
+
+
 
 `
 

@@ -22,12 +22,18 @@ const CursorItem = styled.div`
     transition: top .25s, left .25s, width .5s, height .5s, background .35s;
     transition-timing-function: ease-out;
     visibility: hidden;
+    @media (max-width: 800px) {
+      display: none !important;
+    }
   `}
 
   ${props => props.dot && css`
     background: #000;
     transition: width .25s, height .25s;
     visibility: hidden;
+    @media (max-width: 800px) {
+      display: none !important;
+    }
   `}
 
 

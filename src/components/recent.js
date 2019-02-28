@@ -91,30 +91,34 @@ class RecentWorks extends Component {
         <ProjectList ref={img => this.img = img}>
         <Project>
           <span>
-            <video autoPlay muted loop="loop" width="400" height="300">
-            <source src={require('../images/travel.mp4')} type="video/mp4" />
-            <img alt="recent work" src={require('../images/travel.png')} width="400" height="300" /></video>
+            <video width="400" height="300" autoPlay muted loop playsInline poster="https://giphy.com/gifs/58F2bDDdEce4LCjx8t/html5">
+             <source src={require('../images/travel.mp4')} type="video/mp4" />
+             <source src={require('../images/travel.webm')} type="video/webm" />
+           </video>
           </span>
         </Project>
         <Project>
           <span>
-            <video autoPlay muted loop="loop" width="400" height="300">
+           <video width="400" height="300" autoPlay muted loop playsInline poster="https://giphy.com/gifs/LpFM0IFq6aciTfCeL2/html5">
             <source src={require('../images/planr.mp4')} type="video/mp4" />
-            <img alt="recent work" src={require('../images/planr.png')} width="400" height="300" /></video>
+            <source src={require('../images/planr.webm')} type="video/webm" />
+          </video>
           </span>
         </Project>
         <Project>
           <span>
-            <video autoPlay muted loop="loop" width="400" height="300">
-            <source src={require('../images/vistra-energy.mp4')} type="video/mp4" />
-            <img alt="recent work" src={require('../images/vistra-energy.png')} width="400" height="300" /></video>
+            <video width="400" height="300" autoPlay muted loop playsInline poster="https://giphy.com/gifs/cICXYU9zQ1eWR18jcb/html5">
+             <source src={require('../images/vistra-energy.mp4')} type="video/mp4" />
+             <source src={require('../images/vistra-energy.webm')} type="video/webm" />
+           </video>
           </span>
         </Project>
         <Project>
           <span>
-            <video autoPlay muted loop="loop" width="400" height="300">
-            <source src={require('../images/audi.mp4')} type="video/mp4" />
-            <img alt="recent work" src={require('../images/audi.png')} width="400" height="300" /></video>
+            <video width="400" height="300" autoPlay muted loop playsInline poster="https://giphy.com/gifs/cAqjS1ZeyO4YjUTTDO/html5">
+             <source src={require('../images/audi.mp4')} type="video/mp4" />
+             <source src={require('../images/audi.webm')} type="video/webm" />
+           </video>
           </span>
         </Project>
         </ProjectList>

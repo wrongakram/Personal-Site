@@ -15,9 +15,9 @@ const Title = styled.h1`
   font-weight: 900;
   @media (max-width: 600px) {
     opacity: 0;
-    bottom: -3.2rem;
+    bottom: -2rem;
     line-height: 4rem;
-    font-size: 3.2rem;
+    font-size: 3.0rem;
   }
 `
 
@@ -28,7 +28,6 @@ const HeroWrapper = styled.div`
   align-items: center;
   @media (max-width: 600px) {
     flex-wrap: wrap
-
   }
 `
 
