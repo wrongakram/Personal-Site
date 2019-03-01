@@ -45,21 +45,11 @@ module.exports = {
            }
          }
        },
-
-       {
+    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: "UA-134045744-1",
-        // Puts tracking script in the head instead of the body
-        head: true,
-        // Setting this parameter is optional
-        anonymize: true,
-        // Setting this parameter is also optional
-        respectDNT: true,
-        // Enables Google Optimize Experiment ID
-        sampleRate: 5,
-        siteSpeedSampleRate: 10,
-      }
+      },
     },
 
   ],
