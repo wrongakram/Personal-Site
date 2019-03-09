@@ -21,7 +21,6 @@ const CursorItem = styled.div`
       --size: 50px;
     transition: top .25s, left .25s, width .5s, height .5s, background .35s;
     transition-timing-function: ease-out;
-    visibility: hidden;
     @media (max-width: 800px) {
       display: none !important;
     }
@@ -30,7 +29,6 @@ const CursorItem = styled.div`
   ${props => props.dot && css`
     background: #000;
     transition: width .25s, height .25s;
-    visibility: hidden;
     @media (max-width: 800px) {
       display: none !important;
     }
@@ -63,6 +61,7 @@ const NavItem = styled.li`
   opacity: 0;
   transform: translateY(10px);
   background: #fff;
+  top: 0;
   @media (max-width: 600px) {
     padding: 10px 5%;
   }
@@ -83,10 +82,6 @@ class Header extends Component {
     this.myTween = new TimelineLite();
     this.myTween
     .to(this.header, .6, {opacity: 1, delay: .8 ,ease: Expo.easeOut, x: 0, y: 0})
-
-
-    this.cursorShadow.style.visibility = 'visible';
-    this.cursorDot.style.visibility = 'visible';
 
     window.onmousemove = (e) => {
       this.cursorShadow.style.left = e.pageX + 'px';
@@ -118,7 +113,7 @@ class Header extends Component {
 
   render() {
     return (
-      <NavWrapper ref={div => this.header = div}>
+      <NavWrapper ref={a => this.header = a}>
         <CursorItem shadow ref={div => this.cursorShadow = div} className="cursor-shadow"></CursorItem>
         <CursorItem dot ref={div => this.cursorDot = div} className="cursor-dot"></CursorItem>
         <div

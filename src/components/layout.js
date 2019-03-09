@@ -1,19 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
-import Header from './header'
 import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
 
-*{
+* {
   text-decoration: none;
   -webkit-overflow-scrolling: touch;
+  cursor: none;
 }
 
-
 .cursor-shadow.active {
-  --size: 80px;
+  --size: 90px;
   z-index: -1;
 }
 
@@ -68,7 +67,7 @@ a {
 }
 a:active,
 a:hover {
-  color: #fff !important;
+  color: #464646 !important;
   outline-width: 0;
   transform: translateY(3px);
 }
@@ -275,7 +274,6 @@ const Layout = ({ children }) => (
     render={data => (
       <>
       <GlobalStyle/>
-        <Header/>
         <div>
           {children}
         </div>

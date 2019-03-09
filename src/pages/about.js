@@ -2,13 +2,13 @@ import React from 'react';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import styled from 'styled-components'
+import Header from '../components/header'
 
 const About = styled.div`
   font-family: Lato;
-  margin: 100px 0;
   color: #132f3e;
   .inner {
-    margin: 0 auto;
+    margin: 100px auto 0;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -73,8 +73,9 @@ const SkillsList = styled.div`
 
 const AboutPage = ({data}) => (
   <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-      <About>
+    <SEO title="About" keywords={[`Hire Developer`, `Hire Designer`, `React Developer`]} />
+    <Header/>
+     <About>
         <div className="inner">
           <h3>A <span>little</span> about <br></br> who I am.</h3>
           <span className="block"></span>

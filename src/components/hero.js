@@ -95,6 +95,7 @@ const HighlightWrapper = styled.div`
   display: flex;
   padding: 0;
   margin: 0;
+  opacity: 0;
 `
 
 
@@ -112,7 +113,7 @@ const Highlight = styled.h3`
      font-size: 16px;
     }
   span {
-    opacity: 0;
+     opacity: 0;
      animation: appear-text 0.0001s linear forwards;
      animation-delay: 1.4s;
   }
@@ -129,7 +130,6 @@ const Highlight = styled.h3`
   }
 
   @keyframes rev-block {
-
        0% {
             left: 0;
             width: 0%;
@@ -146,7 +146,6 @@ const Highlight = styled.h3`
   }
 
   @keyframes appear-text {
-
        0% {
             opacity: 0;
        }
@@ -168,6 +167,7 @@ class Hero extends Component {
     super(props);
     this.firstTitle = null;
     this.secondTitle = null;
+    this.highlight = null;
 // reference to the animation
     this.myTween = null;
   }
@@ -176,6 +176,7 @@ class Hero extends Component {
     this.myTween
     .to(this.firstTitle, .6, {opacity: 1 ,delay: .8,ease: Expo.easeOut, x: 0, y: -100})
     .to(this.secondTitle, .6, {opacity: 1 ,delay: -.4,ease: Expo.easeOut, x: 0, y: -100})
+    .to(this.highlight, .6, {opacity: 1 ,delay: -.2,ease: Expo.easeOut})
   }
   render() {
     return (
@@ -187,7 +188,7 @@ class Hero extends Component {
               <TitleContainer>
                 <Title ref={a => this.secondTitle = a}>Digital <Gradient>Experiences.</Gradient></Title>
               </TitleContainer>
-              <HighlightWrapper>
+              <HighlightWrapper ref={div => this.highlight = div}>
                  <Highlight><span> <MobileDelete>UI</MobileDelete> Designer</span></Highlight>
                 <Highlight><span> <MobileDelete>Front End</MobileDelete> Developer</span></Highlight>
                <Highlight><span> <MobileDelete>Exploring</MobileDelete> MERN Stack</span></Highlight>
