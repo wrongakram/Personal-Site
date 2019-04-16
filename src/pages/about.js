@@ -1,6 +1,6 @@
-import React from 'react';
-import Layout from '../components/layout';
-import SEO from '../components/seo';
+import React from 'react'
+import Layout from '../components/layout'
+import SEO from '../components/seo'
 import styled from 'styled-components'
 import Header from '../components/header'
 
@@ -15,8 +15,8 @@ const About = styled.div`
     z-index: -1;
     width: 50%;
     @media (max-width: 600px) {
-     padding: 0 2%;
-     width: 100%;
+      padding: 0 2%;
+      width: 100%;
     }
     h3 {
       font-size: 40px;
@@ -28,7 +28,7 @@ const About = styled.div`
         font-size: 20px;
       }
       @media (max-width: 600px) {
-       font-size: 34px;
+        font-size: 34px;
       }
     }
     .block {
@@ -47,7 +47,6 @@ const About = styled.div`
       font-size: 14px;
     }
   }
-
 `
 
 const SkillsList = styled.div`
@@ -70,49 +69,61 @@ const SkillsList = styled.div`
   }
 `
 
-
-const AboutPage = ({data}) => (
+const AboutPage = ({ data }) => (
   <Layout>
-    <SEO title="About" keywords={[`Hire Developer`, `Hire Designer`, `React Developer`]} />
-    <Header/>
-     <About>
-        <div className="inner">
-          <h3>A <span>little</span> about <br></br> who I am.</h3>
-          <span className="block"></span>
-          <p style={{margin: '0px 0px 40px 0'}} >Hello there, My name is Akram Khalid. I help bring new and exciting designs and tech to a wide variety of clients.
-          I pride myself on being able to turn an idea into a product. Learning new things is part of my everyday life and will be for a long time to come.
-          </p>
-          <p style={{textAlign: 'center', margin: '0px 0px 40px 0', fontWeight: 700}}>Currently making things happen at Vitalstorm Marketing.</p>
-          <p style={{textAlign: 'center'}}>Skills & other things:</p>
-          <SkillsList>
-            <ul>
-              <b>Development</b>
-              <li>HTML</li>
-              <li>SCSS</li>
-              <li>Javascript - es6</li>
-              <li>Jquery</li>
-              <li>React</li>
-              <li>Gatsby.js / Next.js</li>
-              <li>GraphQL</li>
-              <li>REST API</li>
-              <li>Webpack</li>
-              <li>Node.js / npm</li>
-              <li>Wordpress</li>
-            </ul>
-            <ul>
-              <b>Design</b>
-              <li>Photoshop</li>
-              <li>Illustrator</li>
-              <li>Xd</li>
-              <li>Protopie</li>
-            </ul>
-          </SkillsList>
+    <SEO
+      title="About"
+      keywords={[`Hire Developer`, `Hire Designer`, `React Developer`]}
+    />
+    <Header />
+    <About>
+      <div className="inner">
+        <h3>
+          A <span>little</span> about <br /> who I am.
+        </h3>
+        <span className="block" />
+        <p style={{ margin: '0px 0px 40px 0' }}>
+          Hello there, My name is Akram Khalid. I help bring new and exciting
+          designs and tech to a wide variety of clients. I pride myself on being
+          able to turn an idea into a product. Learning new things is part of my
+          everyday life and will be for a long time to come.
+        </p>
+        <p
+          style={{
+            textAlign: 'center',
+            margin: '0px 0px 40px 0',
+            fontWeight: 700,
+          }}
+        >
+          Currently making things happen at Vitalstorm Marketing.
+        </p>
+        <p style={{ textAlign: 'center' }}>Skills & other things:</p>
+        <SkillsList>
+          <ul>
+            <b>Development</b>
+            <li>HTML</li>
+            <li>SCSS</li>
+            <li>Javascript - es6</li>
+            <li>Jquery</li>
+            <li>React</li>
+            <li>Gatsby.js / Next.js</li>
+            <li>GraphQL</li>
+            <li>REST API</li>
+            <li>Webpack</li>
+            <li>Node.js / npm</li>
+            <li>Wordpress</li>
+          </ul>
+          <ul>
+            <b>Design</b>
+            <li>Photoshop</li>
+            <li>Illustrator</li>
+            <li>Xd</li>
+            <li>Protopie</li>
+          </ul>
+        </SkillsList>
       </div>
-      </About>
+    </About>
   </Layout>
-);
+)
 
-
-
-
-export default AboutPage;
+export default AboutPage
