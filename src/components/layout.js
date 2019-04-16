@@ -12,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
 }
 
 .cursor-shadow.active {
-  --size: 90px;
+  --size: 90px; 
   z-index: -1;
 }
 
@@ -258,8 +258,6 @@ body {
 
 `
 
-
-
 const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
@@ -273,10 +271,8 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-      <GlobalStyle/>
-        <div>
-          {children}
-        </div>
+        <GlobalStyle />
+        <div>{children}</div>
       </>
     )}
   />
